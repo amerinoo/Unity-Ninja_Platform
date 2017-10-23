@@ -24,7 +24,6 @@ public class VerticalDetectorScript : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		Debug.Log ("a");
 		if (!(toUp ^ mps.backwards)) {
 			mps.ChangeDirection ();
 		} 
