@@ -48,9 +48,6 @@ public class MovePlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.R)) {
-			PlayerPrefs.SetInt ("highestScore", 0);
-		}
 		bool jump = Input.GetButtonDown ("Fire1") || Input.GetButtonDown ("Jump");
 		if (jump && (grounded || !doubleJump)) {
 			//anim.SetTrigger ("Jump");
@@ -76,7 +73,8 @@ public class MovePlayerScript : MonoBehaviour
 		#endif
 
 		anim.SetFloat ("Speed", Mathf.Abs (h));
-
+		Debug.Log (rb2d.velocity);
+		//rb2d.AddForce (new Vector2 (h * maxSpeed, rb2d.velocity.y));
 		rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
 
 		if (h > 0 && !facingRight) {
@@ -105,5 +103,17 @@ public class MovePlayerScript : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	void OnCollisionEnter2D (Collision2D other)
+	{
+		if (other.transform.CompareTag ("MovingPlatform"))
+			transform.parent.parent = other.transform;
+	}
+
+	void OnCollisionExit2D (Collision2D other)
+	{
+		if (other.transform.CompareTag ("MovingPlatform"))
+			transform.parent.parent = null;
 	}
 }
