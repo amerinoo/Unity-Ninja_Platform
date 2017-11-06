@@ -6,16 +6,15 @@ public class HorizontalDetectorScript : MonoBehaviour
 {
 	Transform parent;
 	MovePlatformScript mps;
-	bool toRight;
-	bool imRight;
+	public bool toRight;
+	public bool imRight;
 
 	// Use this for initialization
 	void Start ()
 	{
 		parent = transform.parent;
 		mps = parent.GetComponent<MovePlatformScript> ();
-		toRight = mps.origin.x - mps.end.x < 0;
-		imRight = transform.position.x < parent.transform.position.x;
+
 	}
 	
 	// Update is called once per frame
@@ -26,8 +25,10 @@ public class HorizontalDetectorScript : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
+		toRight = mps.end.x - mps.origin.x < 0;
+		imRight = transform.position.x > parent.transform.position.x;
 		if (mps.moving) {
-			if (!(imRight ^ toRight ^ mps.backwards)) {
+			if (!(imRight ^ toRight ^ mps.backwards) ^ mps.invertDirection) {
 				parent.GetComponent<MovePlatformScript> ().ChangeDirection ();
 			} 
 		}

@@ -6,14 +6,12 @@ public class VerticalDetectorScript : MonoBehaviour
 {
 	Transform parent;
 	MovePlatformScript mps;
-	bool toUp;
 
 	// Use this for initialization
 	void Start ()
 	{
 		parent = transform.parent;
 		mps = parent.GetComponent<MovePlatformScript> ();
-		toUp = mps.origin.y - mps.end.y < 0;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +22,7 @@ public class VerticalDetectorScript : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (!(toUp ^ mps.backwards)) {
+		if (mps.backwards ^ mps.invertDirection) {
 			mps.ChangeDirection ();
 		} 
 	}

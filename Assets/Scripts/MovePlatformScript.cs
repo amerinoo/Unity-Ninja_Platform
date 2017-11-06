@@ -15,6 +15,10 @@ public class MovePlatformScript : MonoBehaviour
 
 	private float timer;
 
+	Rigidbody2D rb;
+	float speedX;
+	float speedY;
+
 	void Start ()
 	{
 		if (!invertDirection) {
@@ -24,7 +28,11 @@ public class MovePlatformScript : MonoBehaviour
 			origin = transform.parent.Find ("Point").position;
 			end = transform.parent.position;
 		}
+		transform.parent.position = origin;
 		timer = 0.0f;
+		rb = GetComponent<Rigidbody2D> ();
+		speedX = (end.x - origin.x) / travelTime;
+		speedY = (end.y - origin.y) / travelTime;
 	}
 
 	// Update is called once per frame
@@ -36,30 +44,28 @@ public class MovePlatformScript : MonoBehaviour
 			if (timer >= travelTime) { // He de parar
 				timer -= travelTime;
 				moving = false;
+				rb.velocity = new Vector2 (0f, 0f);
 				backwards = !backwards;
 			}
 		} else { 
 			if (timer >= stopDelay) { // He de mourem
 				timer -= stopDelay;
 				moving = true;
+				move ();
 			}
-		}
-
-		if (moving) {
-			move ();
 		}
 	}
 
 	void move ()
 	{
-		float proportion = timer / travelTime;
-		float t = (backwards) ? 1 - proportion : proportion;
-		transform.position = Vector3.Lerp (origin, end, t);
+		float factor = (backwards) ? -1 : 1;
+		rb.velocity = new Vector2 (speedX * factor, speedY * factor);
 	}
 
 	public void ChangeDirection ()
 	{
 		timer = travelTime - timer;
 		backwards = !backwards;
+		move ();
 	}
 }
