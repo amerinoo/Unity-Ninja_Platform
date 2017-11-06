@@ -13,9 +13,8 @@ public class MovePlayerScript : MonoBehaviour
 	[HideInInspector] public bool facingRight = true;
 	[HideInInspector] public bool jump = false;
 
-
-	//public float moveForce = 365f;
 	public float maxSpeed = 8f;
+	public float acceleration = 8f;
 	public float jumpForce = 700f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
@@ -73,9 +72,12 @@ public class MovePlayerScript : MonoBehaviour
 		#endif
 
 		anim.SetFloat ("Speed", Mathf.Abs (h));
-		Debug.Log (rb2d.velocity);
-		//rb2d.AddForce (new Vector2 (h * maxSpeed, rb2d.velocity.y));
-		rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
+		rb2d.AddForce (new Vector2 (h * acceleration, 0), ForceMode2D.Force);
+		if (rb2d.velocity.x > maxSpeed) {
+			rb2d.velocity = new Vector2 (maxSpeed, rb2d.velocity.y);
+		} else if (rb2d.velocity.x < -maxSpeed) {
+			rb2d.velocity = new Vector2 (-maxSpeed, rb2d.velocity.y);
+		}
 
 		if (h > 0 && !facingRight) {
 			Flip ();
@@ -108,12 +110,12 @@ public class MovePlayerScript : MonoBehaviour
 	void OnCollisionEnter2D (Collision2D other)
 	{
 		if (other.transform.CompareTag ("MovingPlatform"))
-			transform.parent.parent = other.transform;
+			transform.parent = other.transform;
 	}
 
 	void OnCollisionExit2D (Collision2D other)
 	{
 		if (other.transform.CompareTag ("MovingPlatform"))
-			transform.parent.parent = null;
+			transform.parent = null;
 	}
 }

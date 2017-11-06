@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoInitPositionScript : MonoBehaviour
+public class CloseAppScript : MonoBehaviour
 {
-	Vector3 initPosition;
+
 	// Use this for initialization
 	void Start ()
 	{
-		initPosition = transform.position;
+		
 	}
 	
 	// Update is called once per frame
@@ -17,8 +17,8 @@ public class GoInitPositionScript : MonoBehaviour
 		
 	}
 
-	void GoInitPosition ()
+	public void ExitGame ()
 	{
-		transform.position = initPosition;
+		Application.Quit ();
 	}
 }

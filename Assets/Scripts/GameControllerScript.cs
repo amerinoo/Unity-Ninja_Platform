@@ -5,58 +5,59 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
-	public static GameControllerScript instance = null;
-	public float health;
 	public float time;
-	public float points;
+	public bool pause;
+	public GameObject player;
+	public bool playerDead;
 
 	private UIControllerScript uics;
-	private bool pause = true;
 
-	void Awake ()
-	{
-		Time.timeScale = 0.0f;
-		if (instance == null) {
-			instance = this;
-		} else if (!instance.Equals (this))
-			Destroy (gameObject);
-
-		DontDestroyOnLoad (gameObject);
-		
-	}
 	// Use this for initialization
 	void Start ()
 	{
+		player = Instantiate (Resources.Load ("Characters/" + StaticData.character))as GameObject;
+		GameObject go = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
+		GameObject.FindGameObjectWithTag ("Player").transform.position = go.transform.Find ("Skeleton/InitialPoint").transform.position;
 		uics = GetComponent<UIControllerScript> ();
+		uics.Setup ();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.H))
-			DamagePlayer (10);
+		if (Input.GetKeyDown (KeyCode.Alpha1))
+			player.SendMessage ("DamagePlayer", 1);
 		
-		if (Input.GetKeyDown (KeyCode.G))
-			GivePoints (10);
+		if (Input.GetKeyDown (KeyCode.Alpha2))
+			player.SendMessage ("GivePoints", 10);
 		
+		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			GiveTime (50);
+			player.SendMessage ("DamagePlayer", -3);
+		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Pause ();
+		}
+
 		if (pause) {
 			
 		} else {
 			time -= Time.deltaTime;
-			if (time <= 0.0f || health <= 0.0f)
+			if (time <= 0.0f || PlayerDead ())
 				EndGame ();
 			
 		}
 	}
 
-	public void StartGame ()
+	bool PlayerDead ()
 	{
-		BroadcastMessage ("GoInitPosition");
-		health = 100.0f;
-		time = 120.0f;
-		points = 0.0f;
-		uics.StartGame ();
-		Resume (); 
+		return playerDead;
+	}
+
+	public void PlayerDead (int playerNum)
+	{
+		playerDead = true;
 	}
 
 	public void Pause ()
@@ -75,22 +76,26 @@ public class GameControllerScript : MonoBehaviour
 
 	public void EndGame ()
 	{
-		Time.timeScale = 0.0f;
-		uics.EndGame ();
+		Pause ();
 	}
 
-	public void ExitGame ()
+	void GiveTime (int i)
 	{
-		Application.Quit ();
+		this.time += i;
 	}
 
-	public void DamagePlayer (int damage)
+
+	public void GoMenu ()
 	{
-		health -= damage;
+		Time.timeScale = 1.0f;
+		SceneManager.LoadScene ("main");
 	}
 
-	public void GivePoints (int points)
+
+	void OnApplicationPause (bool pauseStatus)
 	{
-		this.points += points;
+		
+		if (pauseStatus)
+			Pause ();
 	}
 }
