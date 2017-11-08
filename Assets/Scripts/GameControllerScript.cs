@@ -17,7 +17,7 @@ public class GameControllerScript : MonoBehaviour
 	{
 		player = Instantiate (Resources.Load ("Characters/" + StaticData.character))as GameObject;
 		GameObject go = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
-		GameObject.FindGameObjectWithTag ("Player").transform.position = go.transform.Find ("Skeleton/InitialPoint").transform.position;
+		player.transform.position = go.transform.Find ("Skeleton/InitialPoint").transform.position;
 		uics = GetComponent<UIControllerScript> ();
 		uics.Setup ();
 	}

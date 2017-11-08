@@ -17,6 +17,7 @@ public class EnemyControllerScript : MonoBehaviour
 	public Vector3 target;
 	public bool diee;
 	public int points;
+	public float minDistance = 0.5f;
 
 	// Use this for initialization
 	void Awake ()
@@ -39,9 +40,9 @@ public class EnemyControllerScript : MonoBehaviour
 			diee = false;
 			die ();
 		}
-		if (facingRight && Vector3.Distance (transform.position, end) < 0.2f) {
+		if (facingRight && Vector3.Distance (transform.position, end) < minDistance) {
 			Flip ();
-		} else if (!facingRight && Vector3.Distance (transform.position, origin) < 0.2f) {
+		} else if (!facingRight && Vector3.Distance (transform.position, origin) < minDistance) {
 			Flip ();
 		}
 	}
@@ -77,7 +78,8 @@ public class EnemyControllerScript : MonoBehaviour
 			if (health <= 0f) {
 				die ();
 			}
-			other.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, 40f), ForceMode2D.Force);
+			other.GetComponent<StatusController> ().GivePoints (points);
+			other.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, 25f), ForceMode2D.Impulse);
 		}
 	}
 
@@ -95,6 +97,6 @@ public class EnemyControllerScript : MonoBehaviour
 		health = 0f;
 		rb2d.velocity = Vector3.zero;
 		anim.SetTrigger ("Death");
-		Destroy (gameObject, 0.6f);
+		Destroy (transform.parent.gameObject, 0.6f);
 	}
 }

@@ -1,0 +1,1265 @@
+fileFormatVersion: 2
+guid: b81bedb082329b342b273a6db2ea4f23
+timeCreated: 1510153231
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: IceWizard_0
+    21300002: IceWizard_1
+    21300004: IceWizard_2
+    21300006: IceWizard_3
+    21300008: IceWizard_4
+    21300010: IceWizard_5
+    21300012: IceWizard_6
+    21300014: IceWizard_7
+    21300016: IceWizard_8
+    21300018: IceWizard_9
+    21300020: IceWizard_10
+    21300022: IceWizard_11
+    21300024: IceWizard_12
+    21300026: IceWizard_13
+    21300028: IceWizard_14
+    21300030: IceWizard_15
+    21300032: IceWizard_16
+    21300034: IceWizard_17
+    21300036: IceWizard_18
+    21300038: IceWizard_19
+    21300040: IceWizard_20
+    21300042: IceWizard_21
+    21300044: IceWizard_22
+    21300046: IceWizard_23
+    21300048: IceWizard_24
+    21300050: IceWizard_25
+    21300052: IceWizard_26
+    21300054: IceWizard_27
+    21300056: IceWizard_28
+    21300058: IceWizard_29
+    21300060: IceWizard_30
+    21300062: IceWizard_31
+    21300064: IceWizard_32
+    21300066: IceWizard_33
+    21300068: IceWizard_34
+    21300070: IceWizard_35
+    21300072: IceWizard_36
+    21300074: IceWizard_37
+    21300076: IceWizard_38
+    21300078: IceWizard_39
+    21300080: IceWizard_40
+    21300082: IceWizard_41
+    21300084: IceWizard_42
+    21300086: IceWizard_43
+    21300088: IceWizard_44
+    21300090: IceWizard_45
+    21300092: IceWizard_46
+    21300094: IceWizard_47
+    21300096: IceWizard_48
+    21300098: IceWizard_49
+    21300100: IceWizard_50
+    21300102: IceWizard_51
+    21300104: IceWizard_52
+    21300106: IceWizard_53
+    21300108: IceWizard_54
+    21300110: IceWizard_55
+    21300112: IceWizard_56
+    21300114: IceWizard_57
+    21300116: IceWizard_58
+    21300118: IceWizard_59
+    21300120: IceWizard_60
+    21300122: IceWizard_61
+    21300124: IceWizard_62
+    21300126: IceWizard_63
+    21300128: IceWizard_64
+    21300130: IceWizard_65
+    21300132: IceWizard_66
+    21300134: IceWizard_67
+    21300136: IceWizard_68
+    21300138: IceWizard_69
+    21300140: IceWizard_70
+    21300142: IceWizard_71
+    21300144: IceWizard_72
+    21300146: IceWizard_73
+    21300148: IceWizard_74
+    21300150: IceWizard_75
+    21300152: IceWizard_76
+    21300154: IceWizard_77
+    21300156: IceWizard_78
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 130
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IceWizard_0
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2721
+        width: 209
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_1
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 2723
+        width: 210
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_2
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 2726
+        width: 206
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_3
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 2729
+        width: 206
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_4
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 2731
+        width: 207
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_5
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 2731
+        width: 207
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_6
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 2729
+        width: 205
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_7
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 2726
+        width: 209
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_8
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 2723
+        width: 210
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_9
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 2721
+        width: 211
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_10
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2406
+        width: 215
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_11
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2406
+        width: 217
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_12
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 2406
+        width: 219
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_13
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 2406
+        width: 220
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_14
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 2406
+        width: 221
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_15
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 2406
+        width: 220
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_16
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 2406
+        width: 221
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_17
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 2406
+        width: 219
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_18
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 2406
+        width: 217
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_19
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 2406
+        width: 215
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_20
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2041
+        width: 209
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_21
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 2056
+        width: 206
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_22
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 2056
+        width: 165
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_23
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 2056
+        width: 171
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_24
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 2056
+        width: 206
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_25
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 2056
+        width: 203
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_26
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 2056
+        width: 170
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_27
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 2056
+        width: 169
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_28
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 2041
+        width: 404
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_29
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1694
+        width: 218
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_30
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1694
+        width: 215
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_31
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1698
+        width: 209
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_32
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1690
+        width: 210
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_33
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1685
+        width: 209
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_34
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1685
+        width: 209
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_35
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1690
+        width: 209
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_36
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1698
+        width: 209
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_37
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 1696
+        width: 214
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_38
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 1694
+        width: 218
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_39
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1338
+        width: 219
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_40
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1338
+        width: 217
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_41
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1337
+        width: 214
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_42
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1327
+        width: 212
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_43
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 1319
+        width: 211
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_44
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1318
+        width: 210
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_45
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1327
+        width: 214
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_46
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 1337
+        width: 214
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_47
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 1338
+        width: 217
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_48
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 1337
+        width: 219
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_49
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 869
+        width: 208
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_50
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 869
+        width: 212
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_51
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 873
+        width: 225
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_52
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 873
+        width: 228
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_53
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 899
+        width: 217
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_54
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 950
+        width: 212
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_55
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 979
+        width: 216
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_56
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 950
+        width: 212
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_57
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 898
+        width: 206
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_58
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 869
+        width: 208
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_59
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 549
+        width: 206
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_60
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 556
+        width: 214
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_61
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 556
+        width: 222
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_62
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 555
+        width: 218
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_63
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 555
+        width: 207
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_64
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 555
+        width: 210
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_65
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 555
+        width: 218
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_66
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 556
+        width: 223
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_67
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 556
+        width: 214
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_68
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 120
+        width: 675
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_69
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 217
+        width: 215
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_70
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 215
+        width: 167
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_71
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 212
+        width: 181
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_72
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 213
+        width: 187
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_73
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 213
+        width: 194
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_74
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 217
+        width: 204
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_75
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 221
+        width: 225
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_76
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 199
+        width: 263
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: IceWizard_77
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 154
+        width: 308
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
