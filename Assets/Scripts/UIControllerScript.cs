@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UIControllerScript : MonoBehaviour
 {
+	public GameObject gameScreen;
+	public GameObject gameOver;
+
 	public GameObject pausePanel;
 	public GameObject gameStatusPanel;
 
@@ -49,5 +52,11 @@ public class UIControllerScript : MonoBehaviour
 	public void Resume ()
 	{
 		pausePanel.SetActive (false);
+	}
+
+	public void EndGame ()
+	{
+		gameScreen.SetActive (false);
+		gameOver.SetActive (true);
 	}
 }

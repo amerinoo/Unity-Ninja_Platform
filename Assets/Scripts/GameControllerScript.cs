@@ -11,15 +11,17 @@ public class GameControllerScript : MonoBehaviour
 	public bool playerDead;
 
 	private UIControllerScript uics;
+	private GameObject map;
 
 	// Use this for initialization
 	void Start ()
 	{
 		player = Instantiate (Resources.Load ("Characters/" + StaticData.character))as GameObject;
-		GameObject go = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
-		player.transform.position = go.transform.Find ("Skeleton/InitialPoint").transform.position;
+		map = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
+		player.transform.position = map.transform.Find ("Skeleton/InitialPoint").transform.position;
 		uics = GetComponent<UIControllerScript> ();
 		uics.Setup ();
+		Time.timeScale = 1.0f;
 	}
 	
 	// Update is called once per frame
@@ -76,7 +78,13 @@ public class GameControllerScript : MonoBehaviour
 
 	public void EndGame ()
 	{
-		Pause ();
+		uics.EndGame ();
+		Time.timeScale = 0.0f;
+	}
+
+	public void Restart ()
+	{
+		SceneManager.LoadScene (1);
 	}
 
 	void GiveTime (int i)

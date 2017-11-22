@@ -13,6 +13,7 @@ public class StatusController : MonoBehaviour
 	void Start ()
 	{
 		gcs = GameObject.FindGameObjectWithTag ("GameController").GetComponent< GameControllerScript> ();
+		Restart ();
 	}
 	
 	// Update is called once per frame
@@ -23,6 +24,12 @@ public class StatusController : MonoBehaviour
 		}	
 	}
 
+	void Restart ()
+	{
+		health = 3;
+		points = 0;
+	}
+
 	public void DamagePlayer (int damage)
 	{
 		health -= damage;
@@ -31,5 +38,10 @@ public class StatusController : MonoBehaviour
 	public void GivePoints (int points)
 	{
 		this.points += points;
+	}
+
+	public void Suicide ()
+	{
+		DamagePlayer (health + 1);
 	}
 }
