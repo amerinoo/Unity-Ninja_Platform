@@ -87,6 +87,16 @@ public class GameControllerScript : MonoBehaviour
 		SceneManager.LoadScene (1);
 	}
 
+	public void NextLevel ()
+	{
+		StaticData.level = map.GetComponent <NextLevelInfo> ().nextLevel;
+		if (StaticData.level.Equals ("---")) {
+			GoGameCompleted ();
+			return;
+		}
+		Restart ();
+	}
+
 	void GiveTime (int i)
 	{
 		this.time += i;
@@ -99,6 +109,10 @@ public class GameControllerScript : MonoBehaviour
 		SceneManager.LoadScene ("main");
 	}
 
+	void GoGameCompleted ()
+	{
+		GoMenu ();
+	}
 
 	void OnApplicationPause (bool pauseStatus)
 	{

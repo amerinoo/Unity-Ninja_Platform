@@ -20,6 +20,6 @@ public class TouchLevelGoal : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		gcs.EndGame ();
+		gcs.NextLevel ();
 	}
 }
