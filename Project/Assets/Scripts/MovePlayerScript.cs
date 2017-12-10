@@ -14,7 +14,6 @@ public class MovePlayerScript : MonoBehaviour
 	[HideInInspector] public bool jump = false;
 
 	public float maxSpeed = 8f;
-	public float acceleration = 8f;
 	public float jumpForce = 700f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
@@ -23,7 +22,6 @@ public class MovePlayerScript : MonoBehaviour
 	private Animator anim;
 	private Rigidbody2D rb2d;
 	private float circleRadius = 0.25f;
-	private bool doubleJump = true;
 	private Quaternion calibrationQuat;
 
 
@@ -48,11 +46,10 @@ public class MovePlayerScript : MonoBehaviour
 	void Update ()
 	{
 		bool jump = Input.GetButtonDown ("Fire1") || Input.GetButtonDown ("Jump");
-		if (jump && (grounded || !doubleJump)) {
+		if (jump && grounded) {
 			//anim.SetTrigger ("Jump");
 			rb2d.AddForce (new Vector2 (0f, jumpForce));
-			if (!grounded && !doubleJump)
-				doubleJump = true;
+
 			
 		}
 	}
@@ -61,9 +58,6 @@ public class MovePlayerScript : MonoBehaviour
 	{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, circleRadius, whatIsGround);
 
-		if (grounded) {
-			//doubleJump = false;
-		}
 		float h;
 		#if KEYBOARD_PLATFORM
 		h = Input.GetAxis ("Horizontal");
@@ -72,11 +66,8 @@ public class MovePlayerScript : MonoBehaviour
 		#endif
 
 		anim.SetFloat ("Speed", Mathf.Abs (h));
-		rb2d.AddForce (new Vector2 (h * acceleration, 0), ForceMode2D.Force);
-		if (rb2d.velocity.x > maxSpeed) {
-			rb2d.velocity = new Vector2 (maxSpeed, rb2d.velocity.y);
-		} else if (rb2d.velocity.x < -maxSpeed) {
-			rb2d.velocity = new Vector2 (-maxSpeed, rb2d.velocity.y);
+		if (Mathf.Abs (h) > 0.01) {
+			rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
 		}
 
 		if (h > 0 && !facingRight) {
