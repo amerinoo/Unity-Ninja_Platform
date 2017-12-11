@@ -20,6 +20,8 @@ public class TouchLevelGoal : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		gcs.NextLevel ();
+		if (other.CompareTag ("Player")) {
+			gcs.NextLevel ();
+		}
 	}
 }

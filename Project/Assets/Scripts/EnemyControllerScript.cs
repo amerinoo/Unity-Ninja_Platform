@@ -18,10 +18,14 @@ public class EnemyControllerScript : MonoBehaviour
 	public bool diee;
 	public int points;
 	public float minDistance = 0.5f;
+	public IMoveScript moveScript;
 
 	// Use this for initialization
 	void Awake ()
 	{
+		rb2d = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
+		moveScript = GetComponent<IMoveScript> ();
 		if (!invertDirection) {
 			origin = transform.parent.position;
 			end = transform.parent.Find ("Point").position;
@@ -40,6 +44,7 @@ public class EnemyControllerScript : MonoBehaviour
 			diee = false;
 			die ();
 		}
+
 		if (facingRight && Vector3.Distance (transform.position, end) < minDistance) {
 			Flip ();
 		} else if (!facingRight && Vector3.Distance (transform.position, origin) < minDistance) {
@@ -52,14 +57,7 @@ public class EnemyControllerScript : MonoBehaviour
 		if (health <= 0f) {
 			
 		} else {
-			float h = facingRight ? 1.0f : -1.0f;
-
-			rb2d.AddForce (new Vector2 (h * acceleration, 0), ForceMode2D.Force);
-			if (rb2d.velocity.x > maxSpeed) {
-				rb2d.velocity = new Vector2 (maxSpeed, rb2d.velocity.y);
-			} else if (rb2d.velocity.x < -maxSpeed) {
-				rb2d.velocity = new Vector2 (-maxSpeed, rb2d.velocity.y);
-			}
+			moveScript.Move (this);
 		}
 	}
 

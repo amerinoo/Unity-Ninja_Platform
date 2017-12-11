@@ -21,7 +21,11 @@ public class StartLevelScript : MonoBehaviour
 	public void StartLevel ()
 	{
 		StaticData.level = level;
-		SceneManager.LoadScene ("game");
+		SceneManager.LoadScene (2);
 	}
-	
+
+	void OnCollisionEnter2D (Collision2D other)
+	{
+		StartLevel ();
+	}
 }

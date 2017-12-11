@@ -51,9 +51,6 @@ public class ElevatorScript : MonoBehaviour
 
 		transform.position = Vector3.Lerp (transform.position, t.position, Time.deltaTime);
 		if (Vector3.Distance (transform.position, t.position) < 0.3f) {
-
-			GetComponent<Renderer> ().material.color = Color.HSVToRGB (Random.Range (0.0f, 1.0f), 1.0f, 1.0f);
-
 			Task.current.Succeed ();
 		}
 	}

@@ -13,11 +13,19 @@ public class GameControllerScript : MonoBehaviour
 	private UIControllerScript uics;
 	private GameObject map;
 
+	public bool debug;
+
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
-		player = Instantiate (Resources.Load ("Characters/" + StaticData.character))as GameObject;
-		map = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
+		if (debug) {
+			player = GameObject.Find ("Remove").transform.GetChild (1).gameObject;
+			map = GameObject.Find ("Remove").transform.GetChild (0).gameObject;
+		} else {
+			GameObject.Find ("Remove").SetActive (false);
+			player = Instantiate (Resources.Load ("Characters/" + StaticData.character))as GameObject;
+			map = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
+		}
 		player.transform.position = map.transform.Find ("Skeleton/InitialPoint").transform.position;
 		uics = GetComponent<UIControllerScript> ();
 		uics.Setup ();
@@ -46,9 +54,10 @@ public class GameControllerScript : MonoBehaviour
 			
 		} else {
 			time -= Time.deltaTime;
-			if (time <= 0.0f || PlayerDead ())
+			if (time <= 0.0f || PlayerDead ()) {
+				GameObject.FindGameObjectWithTag ("Level").GetComponent<AudioSource> ().Stop ();
 				EndGame ();
-			
+			}			
 		}
 	}
 
@@ -84,7 +93,7 @@ public class GameControllerScript : MonoBehaviour
 
 	public void Restart ()
 	{
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (2);
 	}
 
 	public void NextLevel ()

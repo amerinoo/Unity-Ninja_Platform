@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StaticData : MonoBehaviour
 {
-	public static string level = "test";
-	public static string character = "Ninja";
+	public static string level = "1";
+	public static string character = "IceWizard";
 
 	// Use this for initialization
 	void Start ()
@@ -16,6 +16,6 @@ public class StaticData : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
+		//https://gamethemesongs.com/
 	}
 }

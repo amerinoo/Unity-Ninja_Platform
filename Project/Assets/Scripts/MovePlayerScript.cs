@@ -15,14 +15,15 @@ public class MovePlayerScript : MonoBehaviour
 
 	public float maxSpeed = 8f;
 	public float jumpForce = 700f;
-	public Transform groundCheck;
 	public LayerMask whatIsGround;
 
-	private bool grounded = false;
+	private bool isGrounded = false;
 	private Animator anim;
 	private Rigidbody2D rb2d;
-	private float circleRadius = 0.25f;
+	private float circleRadius = 0.2f;
 	private Quaternion calibrationQuat;
+
+	public Transform[] groundPoints;
 
 
 
@@ -45,37 +46,52 @@ public class MovePlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		bool jump = Input.GetButtonDown ("Fire1") || Input.GetButtonDown ("Jump");
-		if (jump && grounded) {
-			//anim.SetTrigger ("Jump");
-			rb2d.AddForce (new Vector2 (0f, jumpForce));
-
-			
-		}
+		HandleInput ();
 	}
 
 	void FixedUpdate ()
 	{
-		grounded = Physics2D.OverlapCircle (groundCheck.position, circleRadius, whatIsGround);
+		float horizontal = GetHorizontal ();
+		isGrounded = IsGrounded ();
+		HandleMovement (horizontal);
+		Flip (horizontal);
+		ResetValues ();
 
-		float h;
+	}
+
+	float GetHorizontal ()
+	{
 		#if KEYBOARD_PLATFORM
-		h = Input.GetAxis ("Horizontal");
+		return Input.GetAxis ("Horizontal");
 		#else
-		h = FixAcceleration (Input.acceleration);
+		return FixAcceleration (Input.acceleration);
 		#endif
+	}
 
-		anim.SetFloat ("Speed", Mathf.Abs (h));
-		if (Mathf.Abs (h) > 0.01) {
-			rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
+	void HandleMovement (float horizontal)
+	{
+		
+		if (Mathf.Abs (horizontal) > 0.01) {
+			rb2d.velocity = new Vector2 (horizontal * maxSpeed, rb2d.velocity.y);
 		}
 
-		if (h > 0 && !facingRight) {
-			Flip ();
-		} else if (h < 0 && facingRight) {
-			Flip ();
+		if (isGrounded && jump) {
+			isGrounded = false;
+			rb2d.AddForce (new Vector2 (0f, jumpForce));
 		}
 
+		anim.SetFloat ("Speed", Mathf.Abs (horizontal));
+	}
+
+	void HandleInput ()
+	{
+		if (Input.GetButtonDown ("Fire1") || Input.GetButtonDown ("Jump"))
+			jump = true;
+	}
+
+	void ResetValues ()
+	{
+		jump = false;
 	}
 
 	float FixAcceleration (Vector3 acceleration)
@@ -90,14 +106,29 @@ public class MovePlayerScript : MonoBehaviour
 
 	}
 
-	void Flip ()
+	void Flip (float horizontal)
 	{
-		facingRight = !facingRight;
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight) {
+			facingRight = !facingRight;
+			Vector3 theScale = transform.localScale;
+			theScale.x *= -1;
+			transform.localScale = theScale;
+		}
 	}
 
+	bool IsGrounded ()
+	{
+		foreach (Transform point in groundPoints) {
+			Collider2D[] colliders = Physics2D.OverlapCircleAll (point.position, circleRadius, whatIsGround);
+			for (int i = 0; i < colliders.Length; i++) {
+				if (!colliders [i].gameObject.Equals (gameObject)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	/*
 	void OnCollisionEnter2D (Collision2D other)
 	{
 		if (other.transform.CompareTag ("MovingPlatform"))
@@ -109,4 +140,5 @@ public class MovePlayerScript : MonoBehaviour
 		if (other.transform.CompareTag ("MovingPlatform"))
 			transform.parent = null;
 	}
+	*/
 }
