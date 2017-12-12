@@ -23,7 +23,7 @@ public class GameControllerScript : MonoBehaviour
 			map = GameObject.Find ("Remove").transform.GetChild (0).gameObject;
 		} else {
 			GameObject.Find ("Remove").SetActive (false);
-			player = Instantiate (Resources.Load ("Characters/" + StaticData.character))as GameObject;
+			player = GameObject.FindGameObjectWithTag ("Player");
 			map = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
 		}
 		player.transform.position = map.transform.Find ("Skeleton/InitialPoint").transform.position;
