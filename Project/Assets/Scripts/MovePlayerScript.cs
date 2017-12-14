@@ -55,6 +55,7 @@ public class MovePlayerScript : MonoBehaviour
 		isGrounded = IsGrounded ();
 		HandleMovement (horizontal);
 		Flip (horizontal);
+		HandleLayers ();
 		ResetValues ();
 
 	}
@@ -70,6 +71,9 @@ public class MovePlayerScript : MonoBehaviour
 
 	void HandleMovement (float horizontal)
 	{
+		if (rb2d.velocity.y < 0) {
+			anim.SetBool ("land", true);
+		}
 		
 		if (Mathf.Abs (horizontal) > 0.01) {
 			rb2d.velocity = new Vector2 (horizontal * maxSpeed, rb2d.velocity.y);
@@ -78,6 +82,7 @@ public class MovePlayerScript : MonoBehaviour
 		if (isGrounded && jump) {
 			isGrounded = false;
 			rb2d.AddForce (new Vector2 (0f, jumpForce));
+			anim.SetTrigger ("jump");
 		}
 
 		anim.SetFloat ("Speed", Mathf.Abs (horizontal));
@@ -122,23 +127,21 @@ public class MovePlayerScript : MonoBehaviour
 			Collider2D[] colliders = Physics2D.OverlapCircleAll (point.position, circleRadius, whatIsGround);
 			for (int i = 0; i < colliders.Length; i++) {
 				if (!colliders [i].gameObject.Equals (gameObject)) {
+					anim.ResetTrigger ("jump");
+					anim.SetBool ("land", false);
 					return true;
 				}
 			}
 		}
 		return false;
 	}
-	/*
-	void OnCollisionEnter2D (Collision2D other)
-	{
-		if (other.transform.CompareTag ("MovingPlatform"))
-			transform.parent = other.transform;
-	}
 
-	void OnCollisionExit2D (Collision2D other)
+	void HandleLayers ()
 	{
-		if (other.transform.CompareTag ("MovingPlatform"))
-			transform.parent = null;
+		if (!isGrounded) {
+			anim.SetLayerWeight (1, 1);
+		} else {
+			anim.SetLayerWeight (1, 0);
+		}
 	}
-	*/
 }
