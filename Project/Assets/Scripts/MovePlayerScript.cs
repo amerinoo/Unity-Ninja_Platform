@@ -26,14 +26,15 @@ public class MovePlayerScript : MonoBehaviour
 	public Transform[] groundPoints;
 	public bool dead;
 
+	public SoundEffectsController sec;
 
 
 	// Use this for initialization
 	void Awake ()
 	{
+		sec = GetComponent<SoundEffectsController> ();
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
-
 	}
 
 	void CalibrateAccelerometer ()
@@ -85,6 +86,7 @@ public class MovePlayerScript : MonoBehaviour
 			isGrounded = false;
 			rb2d.AddForce (new Vector2 (0f, jumpForce));
 			anim.SetTrigger ("jump");
+			sec.PlayJump ();
 		}
 
 		anim.SetFloat ("Speed", Mathf.Abs (horizontal));

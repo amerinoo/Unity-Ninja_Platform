@@ -6,18 +6,16 @@ public class StatusController : MonoBehaviour
 {
 	public int health;
 	public int points;
-	public AudioClip damageSound;
 
 	public GameControllerScript gcs;
-	private AudioSource audioSource;
+	public SoundEffectsController sec;
 
 	// Use this for initialization
 	void Start ()
 	{
-		audioSource = GetComponent<AudioSource> ();
+		sec = GetComponent<SoundEffectsController> ();
 		gcs = GameObject.FindGameObjectWithTag ("GameController").GetComponent< GameControllerScript> ();
 		Restart ();
-		audioSource.clip = damageSound;
 	}
 	
 	// Update is called once per frame
@@ -38,7 +36,7 @@ public class StatusController : MonoBehaviour
 
 	public void DamagePlayer (int damage)
 	{
-		audioSource.Play ();
+		sec.PlayDamage ();
 		health -= damage;
 	}
 
