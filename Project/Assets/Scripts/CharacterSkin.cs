@@ -18,6 +18,7 @@ public class CharacterSkin : MonoBehaviour
 		}
 		if (CompareTag ("Player"))
 			ChangeSkin ();
+		Time.timeScale = 1.0f;
 		
 
 	}

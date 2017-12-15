@@ -54,14 +54,15 @@ public class GameControllerScript : MonoBehaviour
 			
 		} else {
 			time -= Time.deltaTime;
-			if (time <= 0.0f || PlayerDead ()) {
-				GameObject.FindGameObjectWithTag ("Level").GetComponent<AudioSource> ().Stop ();
-				EndGame ();
-			}			
+			if (time <= 0.0f) {
+				TimeUp ();
+			} else if (IsPlayerDead ()) {
+				PlayerDead ();
+			}
 		}
 	}
 
-	bool PlayerDead ()
+	bool IsPlayerDead ()
 	{
 		return playerDead;
 	}
@@ -85,10 +86,28 @@ public class GameControllerScript : MonoBehaviour
 		Time.timeScale = 1.0f;
 	}
 
-	public void EndGame ()
+	public void TimeUp ()
 	{
-		uics.EndGame ();
+		Debug.Log ("Time's up");
+		BeforeEndLevel ();	
+	}
+
+	void PlayerDead ()
+	{
+		Debug.Log ("You die!");
+		BeforeEndLevel ();	
+	}
+
+	void BeforeEndLevel ()
+	{
+		Invoke ("EndGame", GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().GetCurrentAnimatorClipInfo (0).Length + 0.1f);
+	}
+
+	void EndGame ()
+	{
+		GameObject.FindGameObjectWithTag ("Level").GetComponent<AudioSource> ().Stop ();
 		Time.timeScale = 0.0f;
+		uics.EndGame ();
 	}
 
 	public void Restart ()

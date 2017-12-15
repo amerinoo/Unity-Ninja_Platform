@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StaticData : MonoBehaviour
 {
-	public static string level = "1";
+	public static string level = "2";
 	public static string character = "IceWizard";
 
 	// Use this for initialization

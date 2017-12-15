@@ -24,6 +24,7 @@ public class MovePlayerScript : MonoBehaviour
 	private Quaternion calibrationQuat;
 
 	public Transform[] groundPoints;
+	public bool dead;
 
 
 
@@ -51,13 +52,14 @@ public class MovePlayerScript : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		float horizontal = GetHorizontal ();
-		isGrounded = IsGrounded ();
-		HandleMovement (horizontal);
-		Flip (horizontal);
-		HandleLayers ();
-		ResetValues ();
-
+		if (!dead) {
+			float horizontal = GetHorizontal ();
+			isGrounded = IsGrounded ();
+			HandleMovement (horizontal);
+			Flip (horizontal);
+			HandleLayers ();
+			ResetValues ();
+		}
 	}
 
 	float GetHorizontal ()

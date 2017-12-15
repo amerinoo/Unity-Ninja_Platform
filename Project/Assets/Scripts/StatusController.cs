@@ -20,6 +20,8 @@ public class StatusController : MonoBehaviour
 	void Update ()
 	{
 		if (health < 0) {
+			GetComponent<MovePlayerScript> ().dead = true;
+			GetComponent<Animator> ().SetTrigger ("die");
 			gcs.PlayerDead (0);
 		}	
 	}
