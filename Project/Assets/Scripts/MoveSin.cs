@@ -5,6 +5,8 @@ using UnityEngine;
 public class MoveSin : IMoveScript
 {
 
+	public float amplitude;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -22,7 +24,7 @@ public class MoveSin : IMoveScript
 	public override void Move (EnemyControllerScript ecs)
 	{
 		float h = ecs.facingRight ? 1.0f : -1.0f;
-		transform.position += new Vector3 (0.1f * h, Mathf.PingPong (Time.time, 0.5f) - 0.25f, 0);
+		transform.position += new Vector3 (0.1f * h, Mathf.PingPong (Time.time, amplitude) - amplitude / 2.0f, 0);
 	}
 
 	#endregion

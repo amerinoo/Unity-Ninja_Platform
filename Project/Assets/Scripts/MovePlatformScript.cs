@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovePlatformScript : MonoBehaviour
 {
 	public float stopDelay;
-	private float travelTime = 3.0f;
+	public float travelTime = 3.0f;
 	public bool invertDirection;
 
 	public Vector3 origin;

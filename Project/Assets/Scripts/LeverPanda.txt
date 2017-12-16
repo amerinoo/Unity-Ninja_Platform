@@ -1,0 +1,13 @@
+tree("Root")
+	sequence
+		IsCollidingPlayer
+		Reset()
+		ChooseCube()
+		SetColor()
+		Wait 3.0
+		mute CheckCubes()
+		Wait 1.0
+		Reset()
+	
+
+

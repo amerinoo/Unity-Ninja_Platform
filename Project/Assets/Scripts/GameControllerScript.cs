@@ -19,13 +19,12 @@ public class GameControllerScript : MonoBehaviour
 	void Awake ()
 	{
 		if (debug) {
-			player = GameObject.Find ("Remove").transform.GetChild (1).gameObject;
 			map = GameObject.Find ("Remove").transform.GetChild (0).gameObject;
 		} else {
 			GameObject.Find ("Remove").SetActive (false);
-			player = GameObject.FindGameObjectWithTag ("Player");
 			map = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
 		}
+		player = GameObject.FindGameObjectWithTag ("Player");
 		player.transform.position = map.transform.Find ("Skeleton/InitialPoint").transform.position;
 		uics = GetComponent<UIControllerScript> ();
 		uics.Setup ();
@@ -147,5 +146,7 @@ public class GameControllerScript : MonoBehaviour
 		
 		if (pauseStatus)
 			Pause ();
+		else
+			Resume ();
 	}
 }

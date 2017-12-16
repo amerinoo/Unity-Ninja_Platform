@@ -15,7 +15,6 @@ public class EnemyControllerScript : MonoBehaviour
 	public Vector3 origin;
 	public Vector3 end;
 	public Vector3 target;
-	public bool diee;
 	public int points;
 	public float minDistance = 0.5f;
 	public IMoveScript moveScript;
@@ -33,23 +32,13 @@ public class EnemyControllerScript : MonoBehaviour
 			origin = transform.parent.Find ("Point").position;
 			end = transform.parent.position;
 		}
-		transform.parent.position = origin;
+		transform.position = origin;
 	}
 		
 
 	// Update is called once per frame
 	void Update ()
 	{
-		if (diee) {
-			diee = false;
-			die ();
-		}
-
-		if (facingRight && Vector3.Distance (transform.position, end) < minDistance) {
-			Flip ();
-		} else if (!facingRight && Vector3.Distance (transform.position, origin) < minDistance) {
-			Flip ();
-		}
 	}
 
 	void FixedUpdate ()
@@ -58,6 +47,11 @@ public class EnemyControllerScript : MonoBehaviour
 			
 		} else {
 			moveScript.Move (this);
+		}
+		if (facingRight && Vector3.Distance (transform.position, end) < minDistance) {
+			Flip ();
+		} else if (!facingRight && Vector3.Distance (transform.position, origin) < minDistance) {
+			Flip ();
 		}
 	}
 
@@ -94,7 +88,7 @@ public class EnemyControllerScript : MonoBehaviour
 	{
 		health = 0f;
 		rb2d.velocity = Vector3.zero;
-		anim.SetTrigger ("Death");
+		anim.SetTrigger ("death");
 		Destroy (transform.parent.gameObject, 0.6f);
 	}
 }
