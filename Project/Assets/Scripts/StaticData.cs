@@ -13,6 +13,7 @@ public class StaticData : MonoBehaviour
 	public static int selectScreen = 1;
 	public static int gameScreen = 2;
 	public static int creditsScreen = 3;
+	public static int pangScreen = 4;
 
 	// Use this for initialization
 	void Start ()
