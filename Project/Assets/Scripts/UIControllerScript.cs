@@ -13,7 +13,7 @@ public class UIControllerScript : MonoBehaviour
 
 	private GameControllerScript gcs;
 	private StatusController sc;
-	private Text health;
+	private GameObject health;
 	private Text remainingTime;
 	private Text points;
 
@@ -27,7 +27,7 @@ public class UIControllerScript : MonoBehaviour
 	void Update ()
 	{
 		if (sc != null) {
-			health.text = string.Format ("Health : {0}", sc.health);
+			health.GetComponent<HealthUpdateUI> ().Update (sc.health);
 			points.text = string.Format ("Points : {0}", sc.points);
 		}
 		if (gcs != null) {
@@ -39,7 +39,7 @@ public class UIControllerScript : MonoBehaviour
 	{
 		gcs = GetComponent<GameControllerScript> ();
 		sc = gcs.player.GetComponent<StatusController> ();
-		health = gameStatusPanel.transform.Find ("Health").GetComponent<Text> ();
+		health = gameStatusPanel.transform.Find ("Health").gameObject;
 		remainingTime = gameStatusPanel.transform.Find ("RemainingTime").GetComponent<Text> ();
 		points = gameStatusPanel.transform.Find ("Points").GetComponent<Text> ();
 	}

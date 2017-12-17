@@ -111,7 +111,7 @@ public class GameControllerScript : MonoBehaviour
 
 	public void Restart ()
 	{
-		SceneManager.LoadScene (2);
+		SceneManager.LoadScene (StaticData.gameScreen);
 	}
 
 	public void NextLevel ()
@@ -133,12 +133,18 @@ public class GameControllerScript : MonoBehaviour
 	public void GoMenu ()
 	{
 		Time.timeScale = 1.0f;
-		SceneManager.LoadScene ("main");
+		SceneManager.LoadScene (StaticData.mainScreen);
+	}
+
+	public void GoCredits ()
+	{
+		Time.timeScale = 1.0f;
+		SceneManager.LoadScene (StaticData.creditsScreen);
 	}
 
 	void GoGameCompleted ()
 	{
-		GoMenu ();
+		GoCredits ();
 	}
 
 	void OnApplicationPause (bool pauseStatus)
