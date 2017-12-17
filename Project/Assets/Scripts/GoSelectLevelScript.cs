@@ -5,6 +5,8 @@ using UnityEngine;
 public class GoSelectLevelScript : MonoBehaviour
 {
 
+	public float time;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -19,6 +21,7 @@ public class GoSelectLevelScript : MonoBehaviour
 
 	public void Go ()
 	{
+		StaticData.time = time;
 		UnityEngine.SceneManagement.SceneManager.LoadScene (StaticData.selectScreen);
 	}
 }

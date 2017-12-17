@@ -24,6 +24,7 @@ public class GameControllerScript : MonoBehaviour
 			GameObject.Find ("Remove").SetActive (false);
 			map = Instantiate (Resources.Load ("Levels/" + StaticData.level))as GameObject;
 		}
+		time = StaticData.time;
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.transform.position = map.transform.Find ("Skeleton/InitialPoint").transform.position;
 		uics = GetComponent<UIControllerScript> ();

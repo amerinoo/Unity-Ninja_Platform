@@ -18,6 +18,7 @@ public class EnemyControllerScript : MonoBehaviour
 	public int points;
 	public float minDistance = 0.5f;
 	public IMoveScript moveScript;
+	public float impulseForce = 25.0f;
 
 	// Use this for initialization
 	void Awake ()
@@ -71,14 +72,16 @@ public class EnemyControllerScript : MonoBehaviour
 				die ();
 			}
 			other.GetComponent<StatusController> ().GivePoints (points);
-			other.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, 25f), ForceMode2D.Impulse);
+			other.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, impulseForce), ForceMode2D.Impulse);
 		}
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		if (other.transform.CompareTag ("Player")) {
-			other.transform.SendMessage ("DamagePlayer", 1);
+		if (health > 0) {
+			if (other.transform.CompareTag ("Player")) {
+				other.transform.SendMessage ("DamagePlayer", 1);
+			}
 		}
 	}
 

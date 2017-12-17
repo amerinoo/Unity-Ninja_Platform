@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StaticData : MonoBehaviour
 {
+	public static float time = 100;
+
 	public static string level = "1";
 	public static string character = "IceWizard";
 
