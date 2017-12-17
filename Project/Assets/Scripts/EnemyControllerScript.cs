@@ -55,7 +55,7 @@ public class EnemyControllerScript : MonoBehaviour
 		}
 	}
 
-	void Flip ()
+	public void Flip ()
 	{
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
@@ -77,7 +77,6 @@ public class EnemyControllerScript : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		Flip ();
 		if (other.transform.CompareTag ("Player")) {
 			other.transform.SendMessage ("DamagePlayer", 1);
 		}
