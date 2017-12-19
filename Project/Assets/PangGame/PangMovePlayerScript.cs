@@ -24,6 +24,8 @@ public class PangMovePlayerScript : MonoBehaviour
 	Animator anim;
 	bool pause;
 	PangUIController uics;
+	float ttl;
+	float ttlMax = 0.5f;
 
 
 	// Use this for initialization
@@ -49,13 +51,15 @@ public class PangMovePlayerScript : MonoBehaviour
 		if (pause) {
 
 		} else {
+			ttl += Time.deltaTime;
 			if (IsPlayerDead ()) {
 				PlayerDead ();
 			} else {
 				if (Input.GetKeyDown (KeyCode.Escape)) {
 					Pause ();
 				}
-				if (Input.GetButtonDown ("Fire1")) {
+				if (ttl > ttlMax && (Input.GetButtonDown ("Fire1") || Input.GetButtonDown ("Jump"))) {
+					ttl = 0;
 					GameObject go = Instantiate (shootPrefab, spawn.position, Quaternion.identity);
 					go.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 10), ForceMode2D.Impulse);
 					Destroy (go, 5);
